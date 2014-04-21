@@ -1,4 +1,4 @@
-package com.powerall.plugin.upanddown;
+package com.esrichina.travelMap;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,8 +15,10 @@ import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 
-public class UploadAndDownLoadPlugin extends CordovaPlugin {
+public class UpLoadAndDownLoadPlugin extends CordovaPlugin {
 
 	private final String TAG = "UploadAndDownLoadPlugin";
 	private Context mContext;
@@ -27,7 +29,7 @@ public class UploadAndDownLoadPlugin extends CordovaPlugin {
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         android.util.Log.d(TAG,"action=>"+action); 
-        mContext = cordova.getAcitivty();
+        mContext = this.cordova.getAcitivty();
 		if (action.equals("upload")) {
 				
 		}else if(action.equals("download")) {
