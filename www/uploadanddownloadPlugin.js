@@ -1,17 +1,19 @@
 var cordova = require('cordova'),
     exec = require('cordova/exec');
 
-var uploadAndDownLoadPlugin = function() {
+var uploadAndDownloadPlugin = function() {
 
 };
-uploadAndDownLoadPlugin.prototype.upload = function(resourcePath)
+uploadAndDownloadPlugin.prototype.upload = function(resourcePath)
 {
-    exec(null, null, 'UpLoadAndDownLoadPlugin', 'upload', [resourcePath]);
+	alert("upload");
+    exec(null, null, 'UploadAndDownloadPlugin', 'upload', [resourcePath]);
 };
-uploadAndDownLoadPlugin.prototype.download = function(downloadPath)
+uploadAndDownloadPlugin.prototype.download = function(downloadPath)
 {
-    exec(null, null, 'UpLoadAndDownLoadPlugin', 'download', [downloadPath]);
+	alert("download");
+    exec(null, null, 'UploadAndDownloadPlugin', 'download', [downloadPath]);
 };
-var upAndDown = new uploadAndDownLoadPlugin();
+var upAndDown = new uploadAndDownloadPlugin();
 
 module.exports = upAndDown;

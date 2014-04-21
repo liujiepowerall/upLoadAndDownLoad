@@ -11,15 +11,15 @@
     <license>Apache 2.0</license>
 	<keywords>powerall,up and down,powerall</keywords>
 	
-	<js-module src="www/uploadanddownloadPlugin.js" name="uploadAndDownLoadPlugin">
+	<js-module src="www/uploadanddownloadPlugin.js" name="uploadAndDownloadPlugin">
 		<clobbers target="upAndDown" />
 	</js-module>
 
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="UpLoadAndDownLoadPlugin">
-                <param name="android-package" value="com.powerall.plugin.upanddown.UpLoadAndDownLoadPlugin"/>
+            <feature name="UploadAndDownloadPlugin">
+                <param name="android-package" value="com.powerall.plugin.upanddown.UploadAndDownloadPlugin"/>
             </feature>
         </config-file>
 
@@ -27,7 +27,7 @@
     		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />			
         </config-file>
 
-        <source-file src="src/android/UpLoadAndDownLoadPlugin.java" target-dir="src/com/powerall/plugin/upanddown" />
+        <source-file src="src/android/UploadAndDownloadPlugin.java" target-dir="src/com/powerall/plugin/upanddown" />
     </platform>  
 
 </plugin>
