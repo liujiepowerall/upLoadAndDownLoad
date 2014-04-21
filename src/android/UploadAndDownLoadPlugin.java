@@ -29,7 +29,7 @@ public class UpLoadAndDownLoadPlugin extends CordovaPlugin {
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         android.util.Log.d(TAG,"action=>"+action); 
-        mContext = this.cordova.getAcitivty();
+        mContext = this.cordova.getActivity();
 		if (action.equals("upload")) {
 				
 		}else if(action.equals("download")) {
