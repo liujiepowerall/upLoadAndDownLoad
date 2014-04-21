@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.powerall.plugin.uploadanddownload"
+    version="0.0.1">
+
+    <name>UploadAndDownloadPlugin</name>
+    <description>upload and download file plugin description</description>
+    <license>Apache 2.0</license>
+	<keywords>powerall,up and down,powerall</keywords>
+	
+	<js-module src="www/uploadanddownloadPlugin.js" name="uploadAndDownLoadPlugin">
+		<clobbers target="upAndDown" />
+	</js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="UpLoadAndDownLoadPlugin">
+                <param name="android-package" value="com.powerall.plugin.upanddown.UpLoadAndDownLoadPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+    		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />			
+        </config-file>
+
+        <source-file src="src/android/UpLoadAndDownLoadPlugin.java" target-dir="src/com/powerall/plugin/upanddown" />
+    </platform>  
+
+</plugin>
